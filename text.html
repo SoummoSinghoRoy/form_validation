@@ -1,0 +1,11 @@
+$to = "recipient email address here"; 
+$subject = "Custom Form"; 
+$email = $_POST['Email'] ; 
+$message = $_POST['Comp'] ; 
+$headers = "From: $Email"; 
+$sent = mail($to, $subject, $message, $headers) ; 
+if($sent) 
+{print "Your mail was sent successfully"; }
+else 
+{print "We encountered an error sending your mail"; }
+?>
